@@ -1,7 +1,7 @@
 import { checkValidateData } from "../utils/validate";
 import { Header } from "./Header";
 import { useState, useRef } from "react";
-import { auth } from "../utils/filebase.js";
+import { auth } from "../utils/firebase.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
