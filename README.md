@@ -16,3 +16,18 @@
 - NetflixGPT
     - Search Bar
     - Movies Suggestions
+
+
+# GPTflix 
+
+- Create React App
+- Configured TailwindCSS
+- Header
+- Routing of app
+- Login Form
+- Sign up Form
+- Form Validation
+- useRef Hook
+- Firebase SetUp
+- Deploying our app to production
+- Create signup user account
