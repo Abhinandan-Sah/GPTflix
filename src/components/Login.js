@@ -5,7 +5,11 @@ import { auth } from "../utils/firebase.js";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice.js";
+import { USER_AVATAR } from "../utils/constants.js";
 
 const Login = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
@@ -15,6 +19,8 @@ const Login = () => {
   const password = useRef(null);
   //if it is sign up form than show name
   const name = useRef(null);
+
+  const dispatch = useDispatch();
 
   const handleButtonClick = () => {
     //Validate the Form Data
@@ -37,7 +43,28 @@ const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          console.log(user);
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: USER_AVATAR,
+          })
+            .then(() => {
+              // Profile updated!
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(
+                addUser({
+                  uid: uid,
+                  email: email,
+                  displayName: displayName,
+                  photoURL: photoURL,
+                })
+              );
+            })
+            .catch((error) => {
+              // An error occurred
+              setErrorMessage(error.message);
+            });
+
+          // console.log(user);
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -46,11 +73,16 @@ const Login = () => {
         });
     } else {
       // Sign In Authentication
-      signInWithEmailAndPassword(auth, email.current.value,password.current.value)
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
+          
+
         })
         .catch((error) => {
           const errorCode = error.code;
@@ -104,12 +136,18 @@ const Login = () => {
           >
             {isSignInForm ? "Sign In" : "Sign Up"}
           </button>
-          
-          {!isSignInForm &&
-            (<><h3 className="text-center py-2">OR</h3>
-           <button onClick={toggleSignIn} className="p-2 m-2 w-full bg-gray-500 bg-opacity-50 rounded-lg text-white text-lg font-semibold">
-            Use a Sign In
-          </button></>)}
+
+          {!isSignInForm && (
+            <>
+              <h3 className="text-center py-2">OR</h3>
+              <button
+                onClick={toggleSignIn}
+                className="p-2 m-2 w-full bg-gray-500 bg-opacity-50 rounded-lg text-white text-lg font-semibold"
+              >
+                Use a Sign In
+              </button>
+            </>
+          )}
           <p className="py-4">Forgot password?</p>
           <p className="cursor-pointer pb-5" onClick={toggleSignIn}>
             {isSignInForm

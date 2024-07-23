@@ -3,7 +3,10 @@ import Login from "./Login";
 import { Browse } from "./Browse";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+
+
 export const Body = () => {
+
   const appRouter = createBrowserRouter([
     {
       path: "/",
@@ -14,6 +17,8 @@ export const Body = () => {
       element: <Browse />,
     },
   ]);
+
+
 
   return (
     <div className="bg-black h-screen">

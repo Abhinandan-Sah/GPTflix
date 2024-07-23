@@ -27,3 +27,5 @@ src/utils/firebase.js
 .firebase
 firebase-debug.log
 firebase.json
+.env
+/env
