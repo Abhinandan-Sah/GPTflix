@@ -48,7 +48,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <div className={` absolute w-screen bg-transparent!  flex justify-between z-50  ${user ? 'pt-5 px-16' : 'p-6 w-10/12 m-auto'}`}>
+    <div className={`  w-full   flex justify-between z-50  ${user ? 'pt-3 px-16 absolute' : 'p-6 w-9/12 m-auto'}`}>
       <svg
         viewBox="0 0 111 30"
         version="1.1"

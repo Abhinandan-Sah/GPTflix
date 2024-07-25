@@ -9,12 +9,12 @@ const MainContainer = () => {
     if(!movies){
         return;
     }
-    const mainMovie = movies[0];
+    const mainMovie = movies[3];
     console.log(mainMovie);
 
     const {original_title, overview, id} = mainMovie;
   return (
-    <div className="overflow-hidden">
+    <div className="w-full ">
         <VideoTitle title={original_title} overview={overview} />
         <VideoBackground movieId={id} />
         

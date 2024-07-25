@@ -3,12 +3,18 @@ import { Header } from "./Header.js";
 import useNowPlayingMovies from "../hooks/useNowPlayingMovies.js";
 import MainContainer from "./MainContainer.js";
 import SecondaryContainer from "./SecondaryContainer.js";
+import usePopularMovies from "../hooks/usePopularMovies.js";
+import useTopRatedMovies from "../hooks/useTopRatedMovies.js";
+import useUpcomingMovies from "../hooks/useUpcomingMovies.js";
 
 export const Browse = () => {
   useNowPlayingMovies();
+  usePopularMovies();
+  useTopRatedMovies();
+  useUpcomingMovies();
 
   return (
-    <div>
+    <div className="bg-black h-full">
       {/* <div className="relative">
         <Header />
         <div className="absolute top-0">

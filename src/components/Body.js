@@ -21,7 +21,7 @@ export const Body = () => {
 
 
   return (
-    <div className="bg-black h-screen">
+    <div className="">
       <RouterProvider router={appRouter} />
     </div>
   );
