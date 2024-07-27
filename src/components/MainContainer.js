@@ -9,8 +9,10 @@ const MainContainer = () => {
     if(!movies){
         return;
     }
+
+    if(movies == null) return <h1 className='text-3xl flex justify-center items-center text-white'>Loading...</h1>;
+
     const mainMovie = movies[1];
-    console.log(mainMovie);
 
     const {original_title, overview, id} = mainMovie;
   return (
