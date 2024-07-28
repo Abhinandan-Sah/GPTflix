@@ -8,7 +8,7 @@ const MovieCard = ({posterPath}) => {
   
   return (
     <div>
-        <div className='w-48 pr-4 h-full hover:scale-110 hover:duration-150'>
+        <div className='w-48 pr-4 h-full cursor-pointer'>
         <img alt="movie poster" className='' src={IMG_CDN + posterPath?.poster_path } />
         </div>
     </div>

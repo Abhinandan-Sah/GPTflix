@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { VideoBackground } from './VideoBackground';
 import VideoTitle from './VideoTitle';
@@ -16,7 +16,7 @@ const MainContainer = () => {
 
     const {original_title, overview, id} = mainMovie;
   return (
-    <div className="w-full ">
+    <div className="w-full">
         <VideoTitle title={original_title} overview={overview} />
         <VideoBackground movieId={id} />
         

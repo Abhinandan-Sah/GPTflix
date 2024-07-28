@@ -18,7 +18,7 @@ export const Browse = () => {
   useUpcomingMovies();
 
   return (
-    <div className="bg-black h-full">
+    <div className="bg-black ">
       {/* <div className="relative">
         <Header />
         <div className="absolute top-0">

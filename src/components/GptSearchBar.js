@@ -30,7 +30,7 @@ const handleGptSearchClick = async () => {
 
       // Andaz Apna Apna, Hera Pheri, Chupke Chupke etc
       const textgpt = await response.text();
-      // console.log(text);
+      
       const gptMovies= textgpt.split(", ");
       //for each movie I will search TMDB API
 
@@ -53,9 +53,9 @@ const handleGptSearchClick = async () => {
 
 
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center  h-full">
       <form
-        className="w-[80%] sm:w-3/4 md:w-3/4 lg-[60%] xl:w-1/2 h-10 grid grid-cols-12"
+        className="w-full sm:w-3/4 md:w-3/4 lg-[60%] xl:w-1/2  grid grid-cols-12 bg-black h-20 rounded-lg"
         onSubmit={(e) => e.preventDefault()}
       >
         <input
