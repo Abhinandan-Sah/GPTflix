@@ -1,5 +1,4 @@
 import React from 'react'
-import { Header } from './Header'
 import WatchMovie from './WatchMovie'
 import { Link } from 'react-router-dom'
 

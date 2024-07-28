@@ -1,8 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import useWatchMoviePage from "../hooks/useWatchMoviePage";
 import { useSelector } from "react-redux";
-import { Header } from "./Header";
 
 const WatchMovie = () => {
   const movieVideo = useSelector((store) => store.movies.movieVideo);

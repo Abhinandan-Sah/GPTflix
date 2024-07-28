@@ -4,7 +4,6 @@ import { addMovieVideo } from '../utils/moviesSlice';
 import { useDispatch, useSelector } from 'react-redux';
 
 const useWatchMoviePage= async(movieId)=>{
-    const movieVideo = useSelector((store)=> store.movies.movieVideo);
     const dispatch = useDispatch();
 
     useEffect(()=>{
