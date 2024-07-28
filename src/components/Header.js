@@ -55,7 +55,7 @@ export const Header = () => {
     
     // Unsubscribe when component unmounts
     return () => unsubscribe();
-  }, []);
+  }, [dispatch, navigate]);
 
   const handleLanguageChange = ((e)=>{
     dispatch(changeLanguage(e.target.value))
