@@ -5,7 +5,7 @@ import GptMovieSuggestion from './GptMovieSuggestion'
 const GptSearch = () => { 
 
   return (
-    <div className='bg-Login-backgroundImage bg-cover bg-center h-screen text-slate-100   pt-32'>
+    <div className='bg-Login-backgroundImage min-h-screen  bg-fixed bg-cover  bg-center  text-slate-100  opacity-90 w-full  pt-32 '>
       <GptSearchBar />
       <GptMovieSuggestion />
     </div>
