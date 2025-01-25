@@ -18,10 +18,10 @@ export const Body = () => {
       path: "/browse",
       element: <Browse />,
     },
-    {
-      path: "/browse/:movieId",
-      element: <MoviePage />,
-    }
+    // {
+    //   path: "/browse/:movieId",
+    //   element: <MoviePage />,
+    // }
   ]);
 
 
