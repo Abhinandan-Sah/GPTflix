@@ -9,8 +9,8 @@ const MovieList = ({ title, movies }) => {
         <h1 className="font-bold text-3xl pb-4">{title}</h1>
         <div className="flex overflow-x-scroll [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         <div className="flex justify-center items-center">
-            {/* {movies?.map((movie)=> {return(<Link key={movie.id} to={"/browse/"+ movie.id}> <MovieCard  posterPath={movie} /></Link>)})} */}
-            {movies?.map((movie)=> {return(<MovieCard  posterPath={movie} />)})}
+            {movies?.map((movie)=> {return(<Link key={movie.id} to={"/browse/"+ movie.id}> <MovieCard  posterPath={movie} /></Link>)})}
+            {/* {movies?.map((movie)=> {return(<MovieCard  posterPath={movie} />)})} */}
 
         </div>
         </div>
