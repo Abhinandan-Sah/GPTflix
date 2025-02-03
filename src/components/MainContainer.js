@@ -12,7 +12,7 @@ const MainContainer = () => {
 
     if(movies == null) return <h1 className='text-3xl flex justify-center items-center text-white'>Loading...</h1>;
 
-    const mainMovie = movies[1];
+    const mainMovie = movies[0];
 
     const {original_title, overview, id} = mainMovie;
   return (
