@@ -1,6 +1,6 @@
 # GPTFlix
 
-- GPTFlix integrates Netflix and ChatGPT to provide a seamless search experience using the GPT API. Effortlessly discover movies, TV shows, and more with natural language queries. Enjoy a smarter, intuitive way to explore your favorite entertainment!
+- GPTFlix integrates Netflix and ChatGPT to provide a seamless search experience using the GPT API. Effortlessly discover movies, TV shows, and more with natural language queries. Enjoy a smarter, intuitive way to explore your favorite entertainments!
 
 # Features
 - Login / Sign Up Page
